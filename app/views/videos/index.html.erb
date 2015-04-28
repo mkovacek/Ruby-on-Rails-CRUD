@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Listing Videos</h2>
+
+<%= link_to new_video_path, :class => 'btn-floating btn-large waves-effect waves-light red' do %>
+<i class="mdi-content-add"></i>
+<% end %>
+
+<ul class="collapsible" data-collapsible="accordion">
+  <% @videos.each do |video| %>
+  <li>
+    <div class="collapsible-header">
+      <i class="mdi-av-my-library-books"></i>
+      <%= link_to video.title, video  %>
+      <span class="right">
+        <%= link_to edit_video_path(video) ,:class => 'btn-floating  waves-effect waves-light red' do %>
+            <i class="mdi-editor-mode-edit"></i><%end%>
+        <%= link_to video,:class => 'btn-floating  waves-effect waves-light red', method: :delete, data: {confirm: 'Are you sure?'} do %>
+        <i class="mdi-notification-event-busy"></i><% end %>
+      </span>
+    </div>
+    <div class="collapsible-body"><p><%= video.descrition %></p></div>
+  </li>
+  <% end %>
+</ul>
