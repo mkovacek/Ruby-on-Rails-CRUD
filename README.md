@@ -1,2 +1,5 @@
 # Ruby-on-Rails-CRUD
-Playing for the first time with Ruby on Rails
+First Ruby on Rails app
+<br>
+<p>Ruby on rails,Materialize,Google maps,Twitter widgets,Facebook pages,Wistia </p>
+
