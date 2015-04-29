@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'pages/charts'
+
   resources :videos
   get 'pages/about'
 
